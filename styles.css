@@ -1,0 +1,488 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    position: fixed;
+    width: 100%;
+}
+
+
+.logo img {
+    width: 100%; 
+    height: 30px;/* Adjust the maximum logo width as needed */
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav li {
+    margin-right: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+}
+
+nav a:hover{
+    color: red;
+    border-bottom: solid 2px red;
+    animation : opace 1s ease-in-out infinite;
+}
+
+@keyframes opace {
+    0%{
+        opacity: 1;
+    }
+    50%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+.menu-icon {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Media query to hide the navigation links and show the menu icon for small screens */
+@media (max-width: 768px) {
+    nav ul {
+        display: none;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+}
+
+/* Media query for medium-sized screens */
+@media (min-width: 769px) and (max-width: 1023px) {
+    .logo img {
+        max-width: 80px;
+    }
+}
+
+/* Media query for large screens */
+@media (min-width: 1024px) {
+    .logo img {
+        max-width: 100px;
+    }
+
+    nav ul {
+        display: flex;
+    }
+
+    .menu-icon {
+        display: none;
+    }
+}
+
+/* Main Section*/
+
+#home_image_container{
+
+    width: 100%;
+    height: 100vh;
+}
+
+#home_image{
+    width: 100%;
+    height: 100vh;
+}
+
+
+@media (max-width: 768px) {
+    #home_image_container, #home_image, #about_us {
+        width: 100%;
+        height: auto;
+    }
+
+    #aboutimg {
+        margin-top: 10px;
+        margin-left: auto;
+        width: auto;
+        height: auto;
+        display: block;
+    }
+
+    #abouttext {
+        display: block;
+        width: auto;
+        margin-left: auto;
+        height: auto;
+        font-size: 1.2rem;
+    }
+    #playnow {
+        font-size: 24px;
+    }
+
+    .linksimage {
+        max-width: 50%;
+    }
+}
+
+/* Medium screens */
+@media (min-width: 769px) and (max-width: 1023px) {
+    #home_image_container, #home_image, #about_us {
+        width: 100%;
+        height: auto;
+    }
+
+    #aboutimg {
+        margin-top: 10px;
+        margin-left: auto;
+        width: auto;
+        height: auto;
+        display: block;
+    }
+
+    #abouttext {
+        display: block;
+        width: auto;
+        margin-left: auto;
+        height: auto;
+        font-size: 1.2rem;
+    }
+    #playnow {
+        font-size: 28px;
+    }
+
+    .linksimage {
+        max-width: 70%;
+    }
+
+}
+
+/* Large screens */
+@media (min-width: 1024px) {
+    #home_image_container, #home_image, #about_us {
+        width: 100%;
+        height: auto;
+    }
+
+    #aboutimg {
+        margin-top: auto;
+        margin-left: auto;
+        width: auto;
+        height: auto;
+        display: block;
+    }
+
+    #abouttext {
+        display: block;
+        width: auto;
+        margin-left: auto;
+        height: auto;
+        font-size: 1.2rem;
+    }
+    #playnow {
+        font-size: 36px;
+    }
+
+    .linksimage {
+        max-width: 100%;
+    }
+}
+  
+
+ /* ABOUT US SECTION */
+
+ #about_us {
+
+    background-color: rgba(248, 224, 8, 0.952);
+    width: 100%;
+    height: auto;
+ }
+
+ #aboutimg{
+    display: inline-block;
+    width: 40%;
+   margin-top: 75px;
+   margin-left: 50px;
+   transition: box-shadow 1s ease-in-out;
+ }
+
+ #aboutimg:hover{
+    box-shadow: 0px 0px 10px 12px rgba(0,0,0,.2);
+    transform: scale(1,1);
+}
+#abouttext{
+    display: inline-block;
+    width: 50%;
+    margin-left: 20px;
+    transition: box-shadow 1s ease-in-out;
+}
+
+#abouttext:hover{
+    box-shadow: 0px 0px 10px 12px rgba(0,0,0,.2);
+    transform: scale(1,1);
+}
+
+#aboutpara{
+    font-weight: bolder;
+    color: rgba(241, 52, 28, 0.976);
+    font-size: 2.3rem;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+#aboutpara2{
+    font-weight: bold;
+    color:orangered;
+    font-size: 20px;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+#aboutcontent li {
+    font-weight: bold;
+    color: orangered;
+    font-size: 15px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#playnow{
+    text-align: center;
+    color: orangered;
+    font-size: 30px;
+    font-weight: bold;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    animation: opace 1s ease-in-out infinite;
+}
+
+#links{
+    
+    display: flex;
+    justify-content: center;
+}
+
+.linksimage{
+    margin-left: 80px;
+}
+
+/*FEATURES*/
+
+#features{
+
+        width: 100%;
+        height: auto;
+        background-color: rgba(9, 204, 247, 0.997);
+}
+
+#carousel{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    
+}
+
+
+.imagediv{ 
+    width: 70%;
+    height: 50vh;
+    margin-left: 40px;
+}
+    
+.image{
+    width: 70%;
+    height: 50vh;
+    margin-left: 40px;
+}
+
+#features ul {
+    list-style: square;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    list-style: none;
+    margin-left: 40px;
+}
+
+#features ul li{
+    width: 50%;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    transition: box-shadow 1s ease-in-out;
+    
+}
+
+#features ul  li h2{
+    color: black;
+}
+
+#features ul li:hover{
+    text-transform: uppercase;
+    box-shadow: 0px 0px 10px 12px rgba(0,0,0,.2);
+    transform: scale(1,1);
+}
+
+#testimonials{
+    text-align: center;
+    font-size: 40px;
+    font-weight: bolder;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+#reviews {
+    width: 100%;
+    height: auto;
+}
+#reviews_container{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.reviewsdiv{
+    width: 30%;
+    height: auto;
+    border-bottom: 4px solid red;
+    margin-top: 20px;
+}
+
+.reviewsdiv p {
+    font-size: 25px;
+    font-family: cursive;
+    transition: box-shadow 1s ease-in-out;
+}
+.reviewsdiv:hover{
+    box-shadow: 0px 0px 10px 12px rgba(0,0,0,.2);
+    transform: scale(1,1);
+    animation: opace 1s ease-in-out infinite;
+}
+
+@media (max-width: 768px) {
+    #testimonials {
+        font-size: 25px; /* Adjust font size for small screens */
+    }
+
+    .reviewsdiv {
+        width: 100%; /* Full width for small screens */
+    }
+
+    .reviewsdiv p {
+        font-size: 18px; /* Decrease font size for small screens */
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1023px) {
+    #testimonials {
+        font-size: 35px;
+    }
+}
+
+
+
+/*FOOTER*/
+
+#contact{
+    background-color: #333;
+    width: 100%;
+    height: auto;
+}
+
+#cdiv{
+    width: 40%;
+    margin: auto;
+}
+
+#ctext1{
+    color: white;
+    text-align: center;
+    font-size: 30px;
+}
+#ctext2{
+    color: white;
+    text-align: center;
+    font-size: 15px;
+}
+#contact_us ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#contact_us ul li{
+    margin:auto;
+}
+.list_links li a{
+    color:white;
+    font-size: 50px;
+}
+
+#contact_links{
+    display: flex;
+    justify-content: center;
+}
+#contact_links a{
+    color: white;
+    text-decoration: none;
+}
+@media screen and (max-width: 768px) {
+    #cdiv {
+        width: 80%;
+    }
+
+    #ctext1 {
+        font-size: 20px;
+    }
+
+    #ctext2 {
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #cdiv {
+        width: 100%;
+    }
+
+    #ctext1 {
+        font-size: 18px;
+    }
+
+    #ctext2 {
+        font-size: 10px;
+    }
+
+    #contact_us ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #contact_us ul li {
+        margin: 10px 0;
+    }
+
+    .list_links li a {
+        font-size: 20px;
+    }
+
+    #contact_links {
+        flex-direction: column;
+    }
+
+    #contact_links a {
+        margin: 10px 0;
+    }
+}
+
+
